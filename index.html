@@ -82,22 +82,25 @@
         <option value="J">景品10</option></select
       ><br />
 
-      <script>
-function doGet(e) {
-  const statusNo = e.parameter.status;  // `status` パラメータを取得
+<script>
+  // ページ読み込み時にURLパラメータを取得してフォームに `statusNo` を追加
+  window.onload = function() {
+    // URLのクエリパラメータから `status` を取得
+    const urlParams = new URLSearchParams(window.location.search);
+    const statusNo = urlParams.get('status');  // `status` パラメータを取得
 
-  // `statusNo` が存在する場合にのみ処理を実行
-  if (statusNo) {
-    const statusNoField = document.createElement("input");
-    statusNoField.type = "hidden";
-    statusNoField.name = "statusNo";
-    statusNoField.value = statusNo;
+    // `statusNo` が存在する場合にのみ処理を実行
+    if (statusNo) {
+      const statusNoField = document.createElement("input");
+      statusNoField.type = "hidden";
+      statusNoField.name = "statusNo";  // フォーム送信時に `statusNo` として渡す
+      statusNoField.value = statusNo;   // `status` の値をフォームにセット
 
-    // フォームに `statusNo` フィールドを追加
-    document.getElementById("userForm").appendChild(statusNoField);
-  }
-}
-      </script>
+      // フォームに `statusNo` フィールドを追加
+      document.getElementById("userForm").appendChild(statusNoField);
+    }
+  };
+</script>
 
       <button type="submit">送信</button>
     </form>
