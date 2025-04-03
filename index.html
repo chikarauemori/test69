@@ -9,13 +9,13 @@
       charset="UTF-8"
     ></script>
     <script
-    src="https://kit.fontawesome.com/d0a601627a.js"
-    crossorigin="anonymous"
-  ></script>
-  <link
-    href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-    rel="stylesheet"
-  />
+      src="https://kit.fontawesome.com/d0a601627a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>
@@ -33,119 +33,114 @@
       id="userForm"
       action="https://script.google.com/macros/s/AKfycbxwouViTBWzZzLcbhFGgSo-ExvMb_wyzadh2xaNI5g_rYUDEybuPPu_uTiUSgujbA/exec"
       method="post"
-      class="h-adr"
-      onsubmit="processCheckboxes(event)"
     >
-      <span class="p-country-name" style="display: none">Japan</span>
-
       <h2>ご希望の景品を選択してください</h2>
 
       <h3>第一希望</h3>
       <select name="firstChoice">
-        <option value="1"></option> 
-        <option value="A">景品1</option> 
-        <option value="B">景品2</option> 
-        <option value="C">景品3</option> 
-        <option value="D">景品4</option> 
-        <option value="E">景品5</option> 
-        <option value="F">景品6</option> 
-        <option value="G">景品7</option> 
-        <option value="H">景品8</option> 
-        <option value="I">景品9</option> 
-        <option value="J">景品10</option> 
-         
+        <option value="1"></option>
+        <option value="A">景品1</option>
+        <option value="B">景品2</option>
+        <option value="C">景品3</option>
+        <option value="D">景品4</option>
+        <option value="E">景品5</option>
+        <option value="F">景品6</option>
+        <option value="G">景品7</option>
+        <option value="H">景品8</option>
+        <option value="I">景品9</option>
+        <option value="J">景品10</option>
       </select>
-        
+
       <h3>第二希望</h3>
       <select name="secondChoice">
-        <option value="2"></option> 
-        <option value="A">景品1</option> 
-        <option value="B">景品2</option> 
-        <option value="C">景品3</option> 
-        <option value="D">景品4</option> 
-        <option value="E">景品5</option> 
-        <option value="F">景品6</option> 
-        <option value="G">景品7</option> 
-        <option value="H">景品8</option> 
-        <option value="I">景品9</option> 
-        <option value="J">景品10</option> 
-         
+        <option value="2"></option>
+        <option value="A">景品1</option>
+        <option value="B">景品2</option>
+        <option value="C">景品3</option>
+        <option value="D">景品4</option>
+        <option value="E">景品5</option>
+        <option value="F">景品6</option>
+        <option value="G">景品7</option>
+        <option value="H">景品8</option>
+        <option value="I">景品9</option>
+        <option value="J">景品10</option>
       </select>
 
       <h3>第三希望</h3>
       <select name="thirdChoice">
-        <option value="3"></option> 
-        <option value="A">景品1</option> 
-        <option value="B">景品2</option> 
-        <option value="C">景品3</option> 
-        <option value="D">景品4</option> 
-        <option value="E">景品5</option> 
-        <option value="F">景品6</option> 
-        <option value="G">景品7</option> 
-        <option value="H">景品8</option> 
-        <option value="I">景品9</option> 
-        <option value="J">景品10</option> 
-         
-      </select><br>
+        <option value="3"></option>
+        <option value="A">景品1</option>
+        <option value="B">景品2</option>
+        <option value="C">景品3</option>
+        <option value="D">景品4</option>
+        <option value="E">景品5</option>
+        <option value="F">景品6</option>
+        <option value="G">景品7</option>
+        <option value="H">景品8</option>
+        <option value="I">景品9</option>
+        <option value="J">景品10</option></select
+      ><br />
 
-        <script>
-          function doGet(e) { // ✅ e を定義
-          const statusNo = e.parameter.status; 
+      <script>
+        function doGet(e) {
+          // ✅ e を定義
+          const statusNo = e.parameter.status;
 
           const statusNoField = document.createElement("input");
           statusNoField.type = "hidden"; // 見えないフィールドとして設定
           statusNoField.name = "statusNo"; // サーバー側で受け取る名前を指定
           statusNoField.value = statusNo; // ユーザーIDの値をセット
- 
-         // フォームにuserIdフィールドを追加
-         document.getElementById("userForm").appendChild(userIdField);
-          }
-        </script>
 
-      <input type="hidden" name="stamp" value="10">
+          // フォームにuserIdフィールドを追加
+          document.getElementById("userForm").appendChild(statusNoField);
+        }
+      </script>
 
-      <button type="submit" value>送信</button>
+      <button type="submit">送信</button>
     </form>
-   
-      <nav>
-    <ui class="menu">
-      <li>
-        <a href="https://chikarauemori.github.io/test57/" target="_blank"
-          ><i class="fa-solid fa-house"></i><br /><span class="iconname"
-            >ホーム</span
-          ></a
-        >
-      </li>
-      <li>
-        <a href="" target="_blank"
-          ><i class="fa-solid fa-location-dot"></i><br /><span class="iconname"
-            >マップ</span
-          ></a
-        >
-      </li>
-      <li>
-        <a
-          href="
-        https://liff.line.me/2007108080-jR8JqOgX" target="_blank"
-          ><i class="fa-solid fa-location-pin"></i><br /><span class="iconname"
-            >スタンプ獲得</span
-          ></a
-        >
-      </li>
-      <li>
-        <a href="https://chikarauemori.github.io/test60/" target="_blank"
-          ><i class="fa-solid fa-circle-user"></i><br /><span class="iconname"
-            >マイページ</span
-          ></a
-        >
-      </li>
-  </nav>
-<style>
- 
-            @media screen and (max-width: 768px) {
-      * {
-      font-size:85% ; /* スマホではフォントサイズを小さくする */
-      }
+
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="https://chikarauemori.github.io/test57/" target="_self"
+            ><i class="fa-solid fa-house"></i><br /><span class="iconname"
+              >ホーム</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://chikarauemori.github.io/test62/" target="_self"
+            ><i class="fa-solid fa-location-dot"></i><br /><span
+              class="iconname"
+              >マップ</span
+            ></a
+          >
+        </li>
+        <li>
+          <a
+            href="
+          https://liff.line.me/2007108080-jR8JqOgX"
+            target="_self"
+            ><i class="fa-solid fa-location-pin"></i><br /><span
+              class="iconname"
+              >スタンプ獲得</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="https://chikarauemori.github.io/test66/" target="_self"
+            ><i class="fa-solid fa-circle-user"></i><br /><span class="iconname"
+              >マイページ</span
+            ></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <style>
+      @media screen and (max-width: 768px) {
+        * {
+          font-size: 85%; /* スマホではフォントサイズを小さくする */
+        }
       }
       .menu {
         position: fixed;
