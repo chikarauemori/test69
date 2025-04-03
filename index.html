@@ -83,18 +83,20 @@
       ><br />
 
       <script>
-        function doGet(e) {
-          // ✅ e を定義
-          const statusNo = e.parameter.status;
+function doGet(e) {
+  const statusNo = e.parameter.status;  // `status` パラメータを取得
 
-          const statusNoField = document.createElement("input");
-          statusNoField.type = "hidden"; // 見えないフィールドとして設定
-          statusNoField.name = "statusNo"; // サーバー側で受け取る名前を指定
-          statusNoField.value = statusNo; // ユーザーIDの値をセット
+  // `statusNo` が存在する場合にのみ処理を実行
+  if (statusNo) {
+    const statusNoField = document.createElement("input");
+    statusNoField.type = "hidden";
+    statusNoField.name = "statusNo";
+    statusNoField.value = statusNo;
 
-          // フォームにuserIdフィールドを追加
-          document.getElementById("userForm").appendChild(statusNoField);
-        }
+    // フォームに `statusNo` フィールドを追加
+    document.getElementById("userForm").appendChild(statusNoField);
+  }
+}
       </script>
 
       <button type="submit">送信</button>
