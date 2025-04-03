@@ -31,8 +31,8 @@
 
     <form
       id="userForm"
-      action="https://script.google.com/macros/s/AKfycbxj7cDUgCjVqXPpdjl1Wf-SbOF4OI0bEl-DiP-GBA-9pJdhdnnu9d6oghPZw8UFtK9I/exec"
-      method="GET"
+      action="https://script.google.com/macros/s/AKfycbxwouViTBWzZzLcbhFGgSo-ExvMb_wyzadh2xaNI5g_rYUDEybuPPu_uTiUSgujbA/exec"
+      method="post"
       class="h-adr"
       onsubmit="processCheckboxes(event)"
     >
@@ -87,6 +87,20 @@
         <option value="J">景品10</option> 
          
       </select><br>
+
+        <script>
+          function doGet(e) { // ✅ e を定義
+          const statusNo = e.parameter.status; 
+
+          const statusNoField = document.createElement("input");
+          statusNoField.type = "hidden"; // 見えないフィールドとして設定
+          statusNoField.name = "statusNo"; // サーバー側で受け取る名前を指定
+          statusNoField.value = statusNo; // ユーザーIDの値をセット
+ 
+         // フォームにuserIdフィールドを追加
+         document.getElementById("userForm").appendChild(userIdField);
+          }
+        </script>
 
       <input type="hidden" name="stamp" value="10">
 
