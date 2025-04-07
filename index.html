@@ -149,21 +149,7 @@
     /><br><br>
       
       <script>
-        function doGet(e) {
-          // ✅ e を定義
-          const statusNo = e.parameter.status;
-
-          const statusNoField = document.createElement("input");
-          statusNoField.type = "hidden"; // 見えないフィールドとして設定
-          statusNoField.name = "statusNo"; // サーバー側で受け取る名前を指定
-          statusNoField.value = statusNo; // ユーザーIDの値をセット
-
-          // フォームにuserIdフィールドを追加
-          document.getElementById("userForm").appendChild(statusNoField);
-        }
-      </script>
-      <script>
-  // URLクエリからパラメータ取得
+  // URLクエリからパラメータ取得してフォームに hidden input を追加
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -179,7 +165,7 @@
       document.getElementById("userForm").appendChild(input);
     }
   };
-      </script>
+</script>
 
       <button type="submit">送信</button>
     </form>
