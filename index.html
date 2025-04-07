@@ -162,6 +162,23 @@
           document.getElementById("userForm").appendChild(statusNoField);
         }
       </script>
+      <script>
+  // URLクエリからパラメータ取得
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  window.onload = function () {
+    const statusNo = getQueryParam("status");
+    if (statusNo) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "statusNo";
+      input.value = statusNo;
+      document.getElementById("userForm").appendChild(input);
+    }
+  };
 
       <button type="submit">送信</button>
     </form>
